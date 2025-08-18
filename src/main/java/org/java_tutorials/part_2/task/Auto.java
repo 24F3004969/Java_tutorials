@@ -1,4 +1,4 @@
-package org.java_tutorials.part_2;
+package org.java_tutorials.part_2.task;
 
 public class Auto {
     public static void main(String[] args) {

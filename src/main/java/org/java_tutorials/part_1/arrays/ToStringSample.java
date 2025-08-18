@@ -47,7 +47,7 @@ public class ToStringSample {
 }
 
 /**
- * Test subject. A very simple class.
+ * D subject. A very simple class.
  */
 class SomeClass implements Serializable {
 

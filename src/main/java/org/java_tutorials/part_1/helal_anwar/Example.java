@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Example {
     public static void main(String[] args) throws InterruptedException, IOException {
-        Pattern p = new Pattern(LocalTime.now().format(DateTimeFormatter.ofPattern("hh:mm:ss")), '*', 5);
+        Pattern p = new Pattern(LocalTime.now().format(DateTimeFormatter.ofPattern("hh:mm:ss")), "*", 5);
 
         while (!LocalTime.now().format(DateTimeFormatter.ofPattern("hh:mm:ss")).isEmpty()) {
             clrscr();

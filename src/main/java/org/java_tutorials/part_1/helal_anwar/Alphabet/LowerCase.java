@@ -9,132 +9,132 @@ public class LowerCase {
 
 
     }
-    public String [][] a(int size,char s){
+    public String [][] a(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] b(int size,char s){
+    public String [][] b(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] c(int size,char s){
+    public String [][] c(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] d(int size,char s){
+    public String [][] d(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] e(int size,char s){
+    public String [][] e(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] f(int size,char s){
+    public String [][] f(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] g(int size,char s){
+    public String [][] g(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] h(int size,char s){
+    public String [][] h(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] i(int size,char s){
+    public String [][] i(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] j(int size,char s){
+    public String [][] j(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] k(int size,char s){
+    public String [][] k(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] l(int size,char s){
+    public String [][] l(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] m(int size,char s){
+    public String [][] m(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] n(int size,char s){
+    public String [][] n(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] o(int size,char s){
+    public String [][] o(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] p(int size,char s){
+    public String [][] p(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] q(int size,char s){
+    public String [][] q(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] r(int size,char s){
+    public String [][] r(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] s(int size,char s){
+    public String [][] s(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] t(int size,char s){
+    public String [][] t(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] u(int size,char s){
+    public String [][] u(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] v(int size,char s){
+    public String [][] v(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] w(int size,char s){
+    public String [][] w(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] x(int size,char s){
+    public String [][] x(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] y(int size,char s){
+    public String [][] y(int size,String s){
 
         return new String[0][];
     }
 
-    public String [][] z(int size,char s){
+    public String [][] z(int size,String s){
 
         return new String[0][];
     }

@@ -104,7 +104,7 @@ abstract public class Polygon implements PolygonMeasurement {
     }
 
     @Override
-    public String getIncenter() {
+    public String getIncentre() {
         if (isRegular()) {
             var x1 = xCoordinate.get(0);
             var y1 = yCoordinate.get(0);

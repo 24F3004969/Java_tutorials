@@ -1,46 +1,70 @@
 package org.java_tutorials.icse.class9th;
-import java.util.Scanner;
 
-public class Test {
+import java.util.*;
+
+interface Iterator {
+    public boolean has_next();
+
+    public Object get_next();
+}
+
+class Sequence {
+    private final int maxLimit = 80;
+    private SeqIterator _iter = null;
+    int[] iArr;
+    int size;
+
+    //implement the parameterized constructor to initialize size
+    public Sequence(int size) {
+        this.size = size;
+        iArr = new int[maxLimit];
+        _iter = new SeqIterator();
+    }
+
+    public void addTo(int i) {
+        if (_iter.indx < maxLimit)
+            iArr[++_iter.indx] = i;
+
+    }
+
+    public Iterator get_Iterator() {
+        return new SeqIterator();
+    }
+//implement addTo(elem) to add an int elem to the sequence
+
+//implement get_Iterator() to return Iterator object
+
+    private class SeqIterator implements Iterator {
+        int indx;
+
+        public SeqIterator() {
+            indx = -1;
+        }
+
+        @Override
+        public boolean has_next() {
+            return this.indx < size-1;
+        }
+
+        @Override
+        public Object get_next() {
+            return iArr[++indx];
+        }
+
+        //implement has_next()
+        //implement get_next()
+    }
+}
+
+class FClass {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        String mainDish = scanner.nextLine();
-        int timeOfDay = scanner.nextInt();
-        boolean hasVoucher = scanner.nextBoolean();
-        boolean isCardPayment = scanner.nextBoolean();
-
-        System.out.println(hasVoucher + " " + isCardPayment);
-
-        int cost;
-        if (mainDish.equals("paneer tikka")) {
-            cost = 250;
-        } else if (mainDish.equals("butter chicken")) {
-            cost = 240;
-        } else if (mainDish.equals("masala dosa")) {
-            cost = 200;
-        } else {
-            System.out.println("Invalid main dish");
-            System.exit(0);
-            return; // To satisfy the compiler
+        Sequence sObj = new Sequence(5);
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < 5; i++) {
+            sObj.addTo(sc.nextInt());
         }
-
-        double totalCost;
-        if (timeOfDay >= 12 && timeOfDay <= 15) {
-            totalCost = (1 - 0.15) * cost;
-        } else {
-            totalCost = cost;
-        }
-
-        if (hasVoucher) {
-            totalCost *= 0.9;
-        }
-
-        if (isCardPayment) {
-            double serviceCharge = 0.05 * totalCost;
-            totalCost += serviceCharge;
-        }
-
-        System.out.printf("%.02f%n", totalCost);
+        Iterator i = sObj.get_Iterator();
+        while (i.has_next())
+            System.out.print(i.get_next() + ", ");
     }
 }

@@ -15,7 +15,7 @@ public class Triangle {
                 return super.loadClass(name);
             }
         };
-        Parcel r=(Parcel) classLoader.loadClass("main.java.org.jmath.util.Test").getDeclaredConstructor().newInstance();
+        Parcel r=(Parcel) classLoader.loadClass("main.java.org.jmath.util.D").getDeclaredConstructor().newInstance();
         r.calculate();*/
         long a = System.currentTimeMillis();
         _generatePythagorean_triplet(3, 20000000);

@@ -2,19 +2,20 @@ package org.java_tutorials.part_1.helal_anwar;
 
 public class Pattern extends Merger {
     private String str;
-    private char aChar;
+    private String aChar;
 
-    public Pattern(String str, char aChar, int size) {
+    public Pattern(String str, String aChar, int size) {
         super(size, aChar, str);
         this.str = str;
         this.aChar = aChar;
     }
 
+
     public void setStr(String str) {
         this.str = str;
     }
 
-    public void setChar(char aChar) {
+    public void setChar(String aChar) {
         this.aChar = aChar;
     }
     public void print() {

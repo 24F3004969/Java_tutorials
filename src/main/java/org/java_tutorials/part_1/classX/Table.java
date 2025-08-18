@@ -14,7 +14,7 @@ public class Table {
             table[i] = new String[]{"helal anwar",
                     "24",
                     "male",
-                    "7895432156",
+                    "7895432156786245646787844561231231846512349456184998465898",
                     "ljhjk@gmail.com"};
         }
         printTable(table);

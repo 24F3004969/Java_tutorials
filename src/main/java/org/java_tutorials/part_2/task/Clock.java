@@ -1,9 +1,8 @@
-package org.java_tutorials.part_2;
+package org.java_tutorials.part_2.task;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-
-class Clock {
+class  Clock {
     public static void main(String[] args) throws InterruptedException {
         double R = 2, c_r = 0.6, r = 1.5;
         LocalTime localTime = LocalTime.parse(LocalTime.now().format(DateTimeFormatter.ofPattern("hh:mm:ss")));
@@ -30,7 +29,7 @@ class Clock {
                     var line_s = new Line(new Point(R, R), new Point(X_s, Y_s)).contains(new Point(x, y));
                     var line_m = new Line(new Point(R, R), new Point(X_m, Y_m)).contains(new Point(x, y));
                     var line_h = new Line(new Point(R, R), new Point(X_h, Y_h)).contains(new Point(x, y));
-                    if ((K && I))
+                    if ((K && I) && false)
                         s.append("\033[0;96m██\33[0m");
                     else if ((line_s && S))
                         s.append("\033[0;32m██\33[0m");
@@ -56,6 +55,7 @@ class Clock {
             System.out.print("\u001b[H");
             long end_time = System.currentTimeMillis();
             Thread.sleep(1000 - (end_time - start_time));
+            System.gc();
         }
     }
 
@@ -66,10 +66,10 @@ class Clock {
     public static boolean isOutsideCircle(Point point, double radius, Point center) {
         return calculateCircle(point, radius, center) > 0;
     }
-
+/*
     public static boolean isOnCircle(Point point, double radius, Point center) {
         return calculateCircle(point, radius, center) == 0;
-    }
+    }*/
 
     public static double calculateCircle(Point point, double r, Point center) {
         return point.y() * point.y() + point.x() * point.x() + center.x() * center.x() + center.y() * center.y()
@@ -99,6 +99,16 @@ class Clock {
 
 }
 
+record Point(double x, double y) {
+    @Override
+    public String toString() {
+        return "Point{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
+}
+
 record Line(Point point, double slope) {
 
     public Line(Point point1, Point point2) {
@@ -120,12 +130,3 @@ record Line(Point point, double slope) {
     }
 }
 
-record Point(double x, double y) {
-    @Override
-    public String toString() {
-        return "Point{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
-    }
-}

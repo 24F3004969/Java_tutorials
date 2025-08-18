@@ -1,7 +1,7 @@
 package org.java_tutorials.part_1.helal_anwar.Number;
 
 public class Digits {
-    public static String [][] zero(int size,char s)
+    public static String [][] zero(int size,String s)
     {
         String[][] a =new String[size][size*2];
         int k=0;
@@ -19,7 +19,7 @@ public class Digits {
         a[size-1][2*size-1]=" ";
         return a;
     }
-    public static String [][] one(int size,char s){
+    public static String [][] one(int size,String s){
         String[][] a =new String[size][size*2];
         int k=size;
         for (int i = 0; i < size; i++)
@@ -34,7 +34,7 @@ public class Digits {
         }
         return a;
     }
-    public static String [][] two(int size,char s){
+    public static String [][] two(int size,String s){
         String[][] a =new String[size][size*2];
         int k=2*size-1;
         for (int i = 0; i < size; i++)
@@ -54,7 +54,7 @@ public class Digits {
         a[0][0]=" ";
         return a;
     }
-    public static String [][] three(int size,char s)
+    public static String [][] three(int size,String s)
     {
         String[][] a =new String[size][size*2];
         for (int i = 0; i < size; i++) {
@@ -69,7 +69,7 @@ public class Digits {
         a[(size-1)/2][2*size-1]=" ";
         return a;
     }
-    public static String [][] four(int size,char s)
+    public static String [][] four(int size,String s)
     {
         String[][] a =new String[size][size*2];
         for (int i = 0; i < size; i++) {
@@ -81,7 +81,7 @@ public class Digits {
         }
         return a;
     }
-    public static String [][] five(int size,char s){
+    public static String [][] five(int size,String s){
         String[][] a =new String[size][size*2];
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size*2; j++) {
@@ -94,7 +94,7 @@ public class Digits {
         a[size-1][2*size-1]=" ";
         return a;
     }
-    public static String [][] six(int size,char s){
+    public static String [][] six(int size,String s){
         String[][] a =new String[size][size*2];
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size*2; j++) {
@@ -109,7 +109,7 @@ public class Digits {
         a[size-1][2*size-1]=" ";
         return a;
     }
-    public static String [][] seven(int size,char s){
+    public static String [][] seven(int size,String s){
         String[][] a =new String[size][size*2];
         int k=2*size-1;
         for (int i = 0; i < size; i++)
@@ -125,7 +125,7 @@ public class Digits {
         }
         return a;
     }
-    public static String [][] eight(int size,char s){
+    public static String [][] eight(int size,String s){
         String[][] a =new String[size][size*2];
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size*2; j++) {
@@ -142,7 +142,7 @@ public class Digits {
         a[(size-1)/2][0]=" ";
         return a;
     }
-    public static String [][] nine(int size,char s){
+    public static String [][] nine(int size,String s){
         String[][] a =new String[size][size*2];
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size*2; j++) {

@@ -1,4 +1,4 @@
-package org.java_tutorials.part_2;
+package org.java_tutorials.part_2.task;
 
 /*
 5 5 5 5 5

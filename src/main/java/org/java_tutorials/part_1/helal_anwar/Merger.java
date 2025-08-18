@@ -8,17 +8,17 @@ import org.java_tutorials.part_1.helal_anwar.Number.Digits;
 import java.util.ArrayList;
 
 class Merger {
-    private char c_;
+    private String c_;
     private final int val;
     private String str;
     private final ArrayList<String[][]> x = new ArrayList<>();
     private String[][] ab;
-    Merger(int val, char c_, String str) {
+    Merger(int val, String c_, String str) {
         this.c_ = c_;
         this.str = str;
         this.val = val;
     }
-    void setC_(char c_) {
+    void setC_(String c_) {
         this.c_ = c_;
     }
     void setStr(String str) {

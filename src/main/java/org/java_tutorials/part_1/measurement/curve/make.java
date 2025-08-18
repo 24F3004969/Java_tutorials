@@ -20,7 +20,7 @@ public class make {
         System.out.println("The perimeter of polygon"+n_gon.getPerimeter());
         System.out.println(n_gon.getAngles());
         System.out.println(n_gon.isRegular());
-        System.out.println(n_gon.getIncenter());
+        System.out.println(n_gon.getIncentre());
         System.out.println(n_gon.getCircumcentre());
         System.out.println();
         N_Gon n_gon1=new N_Gon("(3,4)","(5,11)","(12,8)","(9,5)","(5,6)");
