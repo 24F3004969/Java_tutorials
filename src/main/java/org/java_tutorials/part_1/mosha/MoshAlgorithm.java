@@ -67,6 +67,6 @@ public class MoshAlgorithm {
     }
 
     public static void main(String[] args) {
-        System.out.println(mosh_love_algorithm("java", "kotlin"));
+        System.out.println(mosh_love_algorithm("python","java"));
     }
 }
