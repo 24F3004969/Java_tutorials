@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: org.java_tutorials.part_1.tutorials_10.Main
+
