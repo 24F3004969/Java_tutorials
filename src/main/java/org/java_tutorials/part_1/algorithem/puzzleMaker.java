@@ -24,7 +24,7 @@ public class puzzleMaker {
            move_up((int) (Math.random()*positions.get(direction))+1);
         if (direction.equals("down"))
            move_down((int) (Math.random()*positions.get(direction))+1);
-        System.out.println(getPuzzle());
+       System.out.println(getPuzzle());
         }
     }
 
