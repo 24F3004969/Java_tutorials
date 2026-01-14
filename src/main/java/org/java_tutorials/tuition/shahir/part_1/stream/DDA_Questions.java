@@ -2,6 +2,8 @@ package org.java_tutorials.tuition.shahir.part_1.stream;
 
 import java.util.ArrayList;
 
+import static org.java_tutorials.dsa.util.Util.*;
+
 
 public class DDA_Questions {
     public static void main(String[] args) {
