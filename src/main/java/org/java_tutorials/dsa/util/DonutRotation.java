@@ -20,7 +20,7 @@ public class DonutRotation {
             A += 0.08;
             B += 0.04;
             System.out.print(draw_frames(b, w, h));
-            Thread.sleep(30);
+            Thread.sleep(300);
         }
     }
 

@@ -66,10 +66,6 @@ class  Clock {
     public static boolean isOutsideCircle(Point point, double radius, Point center) {
         return calculateCircle(point, radius, center) > 0;
     }
-/*
-    public static boolean isOnCircle(Point point, double radius, Point center) {
-        return calculateCircle(point, radius, center) == 0;
-    }*/
 
     public static double calculateCircle(Point point, double r, Point center) {
         return point.y() * point.y() + point.x() * point.x() + center.x() * center.x() + center.y() * center.y()
