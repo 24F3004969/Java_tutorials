@@ -14,7 +14,7 @@ public class GridLayout {
     }
 
     private static String[][] randomObstacle(String[][] fillGrid) {
-        IntStream.range(0, 200).forEachOrdered(i -> fillGrid[(int) (Math.random() * fillGrid.length)][(int) (Math.random() * fillGrid.length)] = "∎  ");
+        IntStream.range(0, 200).forEachOrdered(i -> fillGrid[(int) (Math.random() * fillGrid.length)][(int) (Math.random() * fillGrid.length)] = "█  ");
         return fillGrid;
     }
 
