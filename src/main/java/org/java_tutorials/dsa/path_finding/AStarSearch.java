@@ -1,11 +1,6 @@
 package org.java_tutorials.dsa.path_finding;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 class Cell {
     int parent_i, parent_j;
@@ -52,8 +47,8 @@ public class AStarSearch {
                 * (col - dest[1]));
     }
 
-    private void tracePath(Cell[][] cellDetails,
-                           int[] dest) {
+    private List<int[]> tracePath(Cell[][] cellDetails,
+                                  int[] dest) {
         System.out.println("The Path is ");
         int row = dest[0];
         int col = dest[1];
@@ -85,28 +80,29 @@ public class AStarSearch {
             }
         });
         System.out.println();
+        return pathList;
     }
 
-    public void aStarSearch(int[][] grid, int[] src,
-                            int[] dest) {
+    public List<int[]> aStarSearch(int[][] grid, int[] src,
+                                   int[] dest) {
         if (!isValid(src[0], src[1])
                 || !isValid(dest[0], dest[1])) {
             System.out.println(
                     "Source or destination is invalid");
-            return;
+            return null;
         }
 
         if (!isUnBlocked(grid, src[0], src[1])
                 || !isUnBlocked(grid, dest[0], dest[1])) {
             System.out.println(
                     "Source or the destination is blocked");
-            return;
+            return null;
         }
 
         if (isDestination(src[0], src[1], dest)) {
             System.out.println(
                     "We are already at the destination");
-            return;
+            return new ArrayList<>();
         }
 
         boolean[][] closedList = new boolean[ROW][COL];
@@ -163,9 +159,8 @@ public class AStarSearch {
                     cellDetails[i - 1][j].parent_j = j;
                     System.out.println(
                             "The destination cell is found");
-                    tracePath(cellDetails, dest);
                     foundDest = true;
-                    return;
+                    return tracePath(cellDetails, dest);
                 } else if (!closedList[i - 1][j]
                         && isUnBlocked(grid, i - 1, j)) {
                     gNew = cellDetails[i][j].g + 1;
@@ -195,9 +190,8 @@ public class AStarSearch {
                     cellDetails[i + 1][j].parent_j = j;
                     System.out.println(
                             "The destination cell is found");
-                    tracePath(cellDetails, dest);
                     foundDest = true;
-                    return;
+                    return tracePath(cellDetails, dest);
                 } else if (!closedList[i + 1][j]
                         && isUnBlocked(grid, i + 1, j)) {
                     gNew = cellDetails[i][j].g + 1;
@@ -226,9 +220,8 @@ public class AStarSearch {
                     cellDetails[i][j + 1].parent_j = j;
                     System.out.println(
                             "The destination cell is found");
-                    tracePath(cellDetails, dest);
                     foundDest = true;
-                    return;
+                    return tracePath(cellDetails, dest);
                 } else if (!closedList[i][j + 1]
                         && isUnBlocked(grid, i, j + 1)) {
                     gNew = cellDetails[i][j].g + 1;
@@ -257,9 +250,8 @@ public class AStarSearch {
                     cellDetails[i][j - 1].parent_j = j;
                     System.out.println(
                             "The destination cell is found");
-                    tracePath(cellDetails, dest);
                     foundDest = true;
-                    return;
+                    return tracePath(cellDetails, dest);
                 } else if (!closedList[i][j - 1]
                         && isUnBlocked(grid, i, j - 1)) {
                     gNew = cellDetails[i][j].g + 1;
@@ -281,16 +273,15 @@ public class AStarSearch {
                 }
             }
 
-            // 5th Successor (North-East)
+          /*  // 5th Successor (North-East)
             if (isValid(i - 1, j + 1)) {
                 if (isDestination(i - 1, j + 1, dest)) {
                     cellDetails[i - 1][j + 1].parent_i = i;
                     cellDetails[i - 1][j + 1].parent_j = j;
                     System.out.println(
                             "The destination cell is found");
-                    tracePath(cellDetails, dest);
                     foundDest = true;
-                    return;
+                    return tracePath(cellDetails, dest);
                 } else if (!closedList[i - 1][j + 1]
                         && isUnBlocked(grid, i - 1,
                         j + 1)) {
@@ -325,9 +316,8 @@ public class AStarSearch {
                     cellDetails[i - 1][j - 1].parent_j = j;
                     System.out.println(
                             "The destination cell is found");
-                    tracePath(cellDetails, dest);
                     foundDest = true;
-                    return;
+                    return  tracePath(cellDetails, dest);
                 } else if (!closedList[i - 1][j - 1]
                         && isUnBlocked(grid, i - 1,
                         j - 1)) {
@@ -362,9 +352,8 @@ public class AStarSearch {
                     cellDetails[i + 1][j + 1].parent_j = j;
                     System.out.println(
                             "The destination cell is found");
-                    tracePath(cellDetails, dest);
                     foundDest = true;
-                    return;
+                    return tracePath(cellDetails, dest);
                 } else if (!closedList[i + 1][j + 1]
                         && isUnBlocked(grid, i + 1,
                         j + 1)) {
@@ -399,9 +388,8 @@ public class AStarSearch {
                     cellDetails[i + 1][j - 1].parent_j = j;
                     System.out.println(
                             "The destination cell is found");
-                    tracePath(cellDetails, dest);
                     foundDest = true;
-                    return;
+                    return tracePath(cellDetails, dest);
                 } else if (!closedList[i + 1][j - 1]
                         && isUnBlocked(grid, i + 1,
                         j - 1)) {
@@ -427,11 +415,12 @@ public class AStarSearch {
                                 = j;
                     }
                 }
-            }
+            }*/
         }
 
         if (!foundDest)
             System.out.println(
                     "Failed to find the destination cell");
+        return null;
     }
 }
