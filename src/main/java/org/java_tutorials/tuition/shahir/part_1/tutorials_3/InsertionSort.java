@@ -13,20 +13,31 @@ public class InsertionSort {
                     for (int k = i; k > j; k--) {
                         num[k] = num[k - 1];
                     }
-                    num[j]=t;
+                    num[j] = t;
                     break;
                 }
             }
         }
+        /*for (int i = 1; i < num.length; i++) {
+            int key = num[i];
+            int j = i - 1;
+            // Move elements greater than key one position ahead
+            while (j >= 0 && num[j] > key) {
+                num[j + 1] = num[j];
+                j--;
+            }
+            num[j + 1] = key;
+        }*/
         //for (int i = 0; i < num.length; i++) {
-           // System.out.println(num[i]);
-       // }
+        // System.out.println(num[i]);
+        // }
         System.out.println(Arrays.toString(num));
     }
+
     private static int[] randomArray(int n) {
-        int [] a=new int[n];
+        int[] a = new int[n];
         for (int i = 0; i < n; i++) {
-            a[i]=(int)(Math.random()*i*i+i);
+            a[i] = (int) (Math.random() * i * i + i);
         }
         System.out.println("The array is filled");
         return a;
