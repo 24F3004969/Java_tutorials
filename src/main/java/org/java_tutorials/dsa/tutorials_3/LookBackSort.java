@@ -1,4 +1,4 @@
-package org.java_tutorials.tuition.shahir.part_1.tutorials_3;
+package org.java_tutorials.dsa.tutorials_3;
 
 public class LookBackSort {
     public static void main(String[] args) {

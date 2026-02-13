@@ -51,7 +51,7 @@ public class TestOfAlgo {
             }
             grid_pattern.append("\n");
         }
-        IO.println(grid_pattern);
+        System.out.println(grid_pattern);
     }
 
     private static boolean contains(int i, int j, List<int[]> path) {

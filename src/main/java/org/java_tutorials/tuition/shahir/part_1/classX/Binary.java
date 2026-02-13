@@ -5,31 +5,28 @@ import java.util.*;
 
 public class Binary {
     public static void main(String[] args) {
-        int[] a = new int[10];
-        System.out.println("Enter 10 numbers");
+        String[] a = {"Aamish", "Sadiya", "Hanifa", "Helal", "Zaid", "Faiz"};
+        Arrays.sort(a);
+        System.out.println(Arrays.toString(a));
+        System.out.println("Enter 10 name");
         Scanner in = new Scanner(System.in);
-        for (int i = 0; i < 10; i++) {
-            a[i] = in.nextInt();
-        }
-        System.out.println("Enter the number to search");
-        int n = in.nextInt();
+        System.out.println("Enter the name to  be searched");
+        String n = in.nextLine();
         int c = 0;
-        int lb = 0, up = 9, mid;
-        while (lb <= up)
-        {
+        int lb = 0, up = a.length - 1, mid;
+        while (lb <= up) {
             mid = (lb + up) / 2;
-            if (a[mid] == n) {
+            if (a[mid].equals(n)) {
                 c = 1;
                 break;
-            }
-            else if (n > a[mid])
+            } else if (n.compareTo(a[mid]) > 0)
                 lb = mid + 1;
-            else if (n < a[mid])
+            else if (n.compareTo(a[mid]) < 0)
                 up = mid - 1;
         }
         if (c == 1)
-            System.out.println("Number is present");
+            System.out.println("Name is present");
         else
-            System.out.println("Number is not present");
+            System.out.println("Name is not present");
     }
 }
