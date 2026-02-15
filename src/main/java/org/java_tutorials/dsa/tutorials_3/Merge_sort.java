@@ -4,10 +4,9 @@ import java.util.Arrays;
 
 public class Merge_sort {
     public static void main(String[] args) {
-        int[][] arr = {{-20}, {1}, {5}, {4}, {-16}, {7}, {12}, {9}, {59}, {70}}/*randomArray(100)*/;
+        int[][] arr =/* {{-20}, {1}, {5}, {-114}, {-16}, {7}, {12}, {9}, {59}, {70}, {4}}*/randomArray(8000000);
         long start = System.currentTimeMillis();
         int x = ((arr.length % 2 == 0) ? arr.length / 2 : (arr.length + 1) / 2);
-        IO.println(Arrays.deepToString(arr));
         for (int k = 1; k < x; k++) {
             int[][] tem_arr = new int[((arr.length % 2 == 0) ? arr.length / 2 : (arr.length + 1) / 2)][];
             int cu = 0;
@@ -18,10 +17,9 @@ public class Merge_sort {
             if (arr.length % 2 != 0)
                 tem_arr[cu] = arr[arr.length - 1];
             arr = tem_arr;
-            System.out.println(Arrays.deepToString(arr));
         }
         System.out.println(System.currentTimeMillis() - start);
-        System.out.println(Arrays.deepToString(arr));
+        //System.out.println(Arrays.deepToString(arr));
     }
 
     private static int[][] randomArray(int n) {
