@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 2 Example</title>
+    <!-- Use the Vue 2 CDN instead of Vue 3 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app" v-bind:style="{fontSize: fontSize + 'em'}">
+    <p v-if="true">{{message}}</p>
+    <button v-on:click="zoom">click me</button>
+</div>
+
+
+<script>
+    const dataObj = {
+        message: 'IITM online',
+        fontSize: 2,
+    }
+    const objMethods = {
+        zoom() {
+            this.fontSize += 1
+        },
+    }
+
+    const optObject = {
+        el: '#app',
+        data: dataObj,
+        methods: objMethods,
+    }
+
+    const app = new Vue(optObject)
+</script>
+
+</body>
+</html>

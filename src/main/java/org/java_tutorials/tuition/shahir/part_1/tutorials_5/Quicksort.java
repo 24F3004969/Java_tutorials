@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class Quicksort {
     public static void main(String[] args) {
-        int[] x = randomArray(10000000);
+        int[] x = randomArray(10);
         System.out.println(Arrays.toString(x));
         sort(x);
     }
@@ -20,10 +20,10 @@ public class Quicksort {
     }
 
     private static void sort(int[] a) {
-        var points = new ArrayList<Integer[]>();
-        points.add(new Integer[]{0, a.length - 1});
+        var points = new ArrayList<int[]>();
+        points.add(new int[]{0, a.length - 1});
         for (int j = 0; j < points.size(); j++) {
-            Integer[] k = points.get(j);
+            int[] k = points.get(j);
             int start = k[0];
             int end = k[1];
             int pivot = k[1];
@@ -38,10 +38,10 @@ public class Quicksort {
                 } else i++;
             }
             if (pivot - start >= 2) {
-                points.add(new Integer[]{start, pivot - 1});
+                points.add(new int[]{start, pivot - 1});
             }
             if (end - pivot >= 2) {
-                points.add(new Integer[]{pivot + 1, end});
+                points.add(new int[]{pivot + 1, end});
             }
         }
         System.out.println(Arrays.toString(a));

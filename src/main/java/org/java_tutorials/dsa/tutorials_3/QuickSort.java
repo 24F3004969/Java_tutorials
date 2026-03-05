@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class QuickSort
 {
     public static void main(String[] args) {
-        int[][] x =randomArray1(50000);
+        int[][] x =randomArray1(50);
         //System.out.println(Arrays.toString(x[0]));
         int len=0;
         while (x.length>len)
@@ -20,9 +20,9 @@ public class QuickSort
             x=tem;
         }
         System.out.println("Sorted");
-       /* for (int[] ints : x) {
-            System.out.print(Arrays.toString(ints) + ",");
-        }*/
+       for (int[] ints : x) {
+           System.out.print(Arrays.toString(ints) + ",");
+       }
 
     }
     private static int[][] randomArray1(int n) {

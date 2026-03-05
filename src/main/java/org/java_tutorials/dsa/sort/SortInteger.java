@@ -5,8 +5,9 @@ import java.util.Arrays;
 public class SortInteger {
     public static void main(String[] args) {
         //IO.println(Arrays.toString(merge_sort(new int[]{0, 1, 2, 11, 5, 7, 35, 34, 54, 88})));
+        var abc=randomArray(10000000);
         long startTime = System.currentTimeMillis();
-       merge_sort(/*new int[]{-20, 1, 5, -4, -26, 7, 12, 9, 59, 70}*/randomArray(8000000));
+       merge_sort(/*new int[]{-20, 1, 5, -4, -26, 7, 12, 9, 59, 70}*/abc);
        long endTime = System.currentTimeMillis();
        System.out.println(endTime - startTime);
     }
@@ -56,14 +57,6 @@ public class SortInteger {
         return a;
     }
 
-    /*
-        private static void chain_swap(int[] a, int p, int q) {
-            int tem = a[q];
-            for (int i = q - 1; i >= p; i--) {
-                a[i + 1] = a[i];
-            }
-            a[p] = tem;
-        }*/
     private static int[] randomArray(int n) {
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
@@ -96,7 +89,7 @@ public class SortInteger {
     }
 
     private static int merge(int[] a, int i, int j, int end1, int end2, int ind, int[] tem) {
-        while (i < end1 && j < end2 && ind < a.length && i < a.length && j < a.length) {
+        while (i < end1 && j < end2  && i < a.length && j < a.length) {
             if (a[i] >= a[j]) {
                 tem[ind++] = a[j++];
             } else {

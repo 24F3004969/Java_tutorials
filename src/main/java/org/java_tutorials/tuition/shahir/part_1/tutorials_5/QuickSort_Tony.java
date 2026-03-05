@@ -28,7 +28,8 @@ public class QuickSort_Tony {
             int pivot = a[(start + end) / 2];
             int i = start - 1;
             int j = end + 1;
-            while (true) {
+            while (true)
+            {
                 do {
                     i = i + 1;
                 } while (a[i] < pivot);

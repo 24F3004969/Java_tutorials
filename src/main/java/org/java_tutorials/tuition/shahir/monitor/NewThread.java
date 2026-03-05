@@ -43,8 +43,8 @@ class MultiThreadDemo {
             nt2.t.join();
             nt3.t.join();
         } catch (InterruptedException e) {
-            System.out.println("Main thread Interrupted");
+            System.out.println("GrraphTest thread Interrupted");
         }
-        System.out.println("Main thread exiting.");
+        System.out.println("GrraphTest thread exiting.");
     }
 }
