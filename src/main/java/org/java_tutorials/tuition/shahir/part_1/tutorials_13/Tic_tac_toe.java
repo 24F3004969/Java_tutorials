@@ -2,14 +2,14 @@ package org.java_tutorials.tuition.shahir.part_1.tutorials_13;
 
 import java.util.Scanner;
 
-class Tic_tac_toe implements buttons {
+class Tic_tac_toe implements Brain {
     int count = 0;
     int col, row;
     String[][] Box = new String[7][16];
     String val = "X";
 
     public static void main(String[] args) {
-        /*System.out.println("Welcome to tic tac toe");
+       /* System.out.println("Welcome to tic tac toe");
         Tic_tac_toe game = new Tic_tac_toe();
         game.start();*/
         Board bo=new Board(new Cursor(0,2,Colors.BLUE));
@@ -336,7 +336,7 @@ class Tic_tac_toe implements buttons {
     }
 }
 
-interface buttons {
+interface Brain {
     int[][][][] Defender = {{{{1, 7}, {1, 12}}, {{5, 2}, {3, 2}}, {{3, 7}, {5, 12}}},
             {{{1, 12}, {1, 2}}, {{3, 7}, {5, 7}}},
             {{{1, 7}, {1, 2}}, {{3, 12}, {5, 12}}, {{3, 7}, {5, 2}}},

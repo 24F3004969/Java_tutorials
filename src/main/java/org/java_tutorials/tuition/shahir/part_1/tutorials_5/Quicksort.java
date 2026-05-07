@@ -21,7 +21,7 @@ public class Quicksort {
 
     private static void sort(int[] a) {
         var points = new ArrayList<int[]>();
-        points.add(new int[]{0, a.length - 1});
+        points.add(new int[]{0, a.length - 1}) ;
         for (int j = 0; j < points.size(); j++) {
             int[] k = points.get(j);
             int start = k[0];
